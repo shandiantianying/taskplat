@@ -4,7 +4,15 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
+
+    
+
     state: {
+        user:{
+            username: "",
+            password: "",
+            uid:""
+        },
         // 左侧菜单栏数据
         menuItems: [
             {
@@ -48,19 +56,19 @@ const store = new Vuex.Store({
                 children: [
                     {
                         type: 'md-paper',
-                        name: 't1',
+                        name: 'atinit',
                         text: '初始化任务'
                         // hidden 属性 隐藏此菜单 可以通过在地址栏上输入对应的 URL 来显示页面
                         // hidden: true,
                     },
                     {
                                 type: 'md-repeat',
-                                name: 'password',
+                                name: 'atSenddeclare',
                                 text: '缴款发送申报任务',
                             },
                             {
                                 type: 'logo-playstation',
-                                name: 'userinfo',
+                                name: 'attaxpay',
                                 text: '税款缴纳',
                          
                     },
@@ -105,6 +113,9 @@ const store = new Vuex.Store({
         setMenus(state, items) {
             state.menuItems = [...items]
         },
+        setUser(state, user) {
+            state.user = user
+        }
     },
 })
 

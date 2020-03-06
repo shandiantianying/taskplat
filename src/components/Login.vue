@@ -35,12 +35,14 @@
 
 <script>
 import { request } from "../network/index";
+import api from '../network/api'
 export default {
   name: "login",
   data() {
     return {
       account: "admin",
       pwd: "admin",
+      uid:"",
       accountError: "",
       pwdError: "",
       isShowLoading: false,
@@ -81,23 +83,27 @@ export default {
     submit() {
       let params = {
         username: this.account,
-        password: this.pwd
+        password: this.pwd,
+        uid:""
       };
       console.log(params);
       this.isShowLoading = true
       request({
-        url: "v1/user/checkUser",
+        url: api.login,
         method: "POST",
         data: params,
       })
         .then(res => {
+          console.log(res);
+          
         this.isShowLoading = false;
           if(res.data.errorCode==='-1'){
               this.accountError = res.data.errorMsg;
           }else if(res.data.errorCode==='-2'){
              this.pwdError = res.data.errorMsg;
           }if(res.data.errorCode==='0'){
-              console.log(res);
+              params.uid = res.data.result.uid;
+              this.$store.commit('setUser',{username:this.account,password:this.pwd,uid:res.data.result.uid});
               localStorage.setItem('userImg', 'http://img3.imgtn.bdimg.com/it/u=327780991,864370952&fm=11&gp=0.jpg')
               localStorage.setItem('userName', this.account)
               // 登陆成功 假设这里是后台返回的 token

@@ -52,8 +52,24 @@ export const asyncRoutes = {
         meta: { title: '申报缴款' },
         component: () => import('../views/taxdeclare/Tddeclarepay.vue'),
     },
-
-
+    atinit: {
+        path: 'atinit',
+        name: 'atinit',
+        meta: { title: '初始化' },
+        component: () => import('../views/activity/Atinit.vue'),
+    },
+    atSenddeclare: {
+        path: 'atSenddeclare',
+        name: 'atSenddeclare',
+        meta: { title: '发送申报' },
+        component: () => import('../views/activity/AtSenddeclare.vue'),
+    },
+    attaxpay: {
+        path: 'attaxpay',
+        name: 'attaxpay',
+        meta: { title: '申报缴款' },
+        component: () => import('../views/activity/Attaxpay.vue'),
+    },
     t1: {
         path: 't1',
         name: 't1',
