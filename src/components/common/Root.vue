@@ -17,13 +17,12 @@ export default {
 }
 </script>
 <style scoped>
-.root {
-  overflow: auto;
-  height: 100%;
-  width: 100%;
-}
-
-.root::-webkit-scrollbar {
-	border-width:1px;
-}
+  .root {
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+  }
+  .root::-webkit-scrollbar {
+    border-width:1px;
+  }
 </style>

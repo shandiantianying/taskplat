@@ -5,4 +5,7 @@ export default {
   tdsenddeclare: '/v1/fsbbTaskData?pageNum=PAGENUM' ,
   tddeclarepay: '/v1/scjyskjnTaskData?pageNum=PAGENUM' ,
   userPwdedit: '/v1/user/editUserPwd' ,
+  cpdataQuery:'v1/creditpre/queryDatalist?ageNum=PAGENUM',
+  sinfoQuery:'v1/shareInfo/queryData?ageNum=PAGENUM',
+  sinfoshhQuery:'v1/shareInfo/queryShhData?ageNum=PAGENUM',
 }

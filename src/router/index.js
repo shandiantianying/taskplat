@@ -70,6 +70,24 @@ export const asyncRoutes = {
         meta: { title: '申报缴款' },
         component: () => import('../views/activity/Attaxpay.vue'),
     },
+    cphome: {
+        path: 'cphome',
+        name: 'cphome',
+        meta: { title: '信用预评' },
+        component: () => import('../views/creditPreview/Cphome.vue'),
+    },
+    sharelist: {
+        path: 'sharelist',
+        name: 'sharelist',
+        meta: { title: '挂牌信息' },
+        component: () => import('../views/shareInfo/ShareList.vue'),
+    },
+    shareshh: {
+        path: 'shareshh',
+        name: 'shareshh',
+        meta: { title: '预审核信息' },
+        component: () => import('../views/shareInfo/ShareShh.vue'),
+    },
     t1: {
         path: 't1',
         name: 't1',

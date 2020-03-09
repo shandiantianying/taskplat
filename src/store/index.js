@@ -80,15 +80,15 @@ const store = new Vuex.Store({
                 children: [
                     {
                         type: 'ios-grid',
-                        name: 't1',
-                        text: '挂牌任务',
+                        name: 'sharelist',
+                        text: '挂牌信息',
                         // hidden 属性 隐藏此菜单 可以通过在地址栏上输入对应的 URL 来显示页面
                         // hidden: true,
                     },
                     {
                         type: 'ios-grid',
-                        name: 't1',
-                        text: '预审核任务',
+                        name: 'shareshh',
+                        text: '预审核信息',
                         // hidden 属性 隐藏此菜单 可以通过在地址栏上输入对应的 URL 来显示页面
                         // hidden: true,
                     }
@@ -100,7 +100,7 @@ const store = new Vuex.Store({
                 children: [
                     {
                         type: 'ios-grid',
-                        name: 't1',
+                        name: 'cphome',
                         text: '预评结果',
                         // hidden 属性 隐藏此菜单 可以通过在地址栏上输入对应的 URL 来显示页面
                         // hidden: true,
