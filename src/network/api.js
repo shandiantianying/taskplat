@@ -8,4 +8,7 @@ export default {
   cpdataQuery:'v1/creditpre/queryDatalist?ageNum=PAGENUM',
   sinfoQuery:'v1/shareInfo/queryData?ageNum=PAGENUM',
   sinfoshhQuery:'v1/shareInfo/queryShhData?ageNum=PAGENUM',
+  atinit:'/v1/scjycshTaskData?pageNum=PAGENUM',
+  attaxpay:'/v1/scjyskjnTaskData?pageNum=PAGENUM',
+  atsenddeclare:'/v1/scjyyjnsbbTaskData?pageNum=PAGENUM',
 }
