@@ -11,4 +11,10 @@ export default {
   atinit:'/v1/scjycshTaskData?pageNum=PAGENUM',
   attaxpay:'/v1/scjyskjnTaskData?pageNum=PAGENUM',
   atsenddeclare:'/v1/scjyyjnsbbTaskData?pageNum=PAGENUM',
+  tdinitdata:'v1/chartData/incomeAndTaxData',
+  tdpreRecordData:'v1/chartData/preRecordData',
+  tdsendDeclarData:'v1/chartData/sendDeclarData',
+  atinitdata:'v1/chartData/atinitdata',
+  attaxpaydata:'v1/chartData/attaxpaydata',
+  cpchartdata:'v1/chartData/cpchartdata'
 }

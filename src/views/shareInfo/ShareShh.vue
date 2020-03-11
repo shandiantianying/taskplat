@@ -2,17 +2,17 @@
  <Root>
     <Form ref="formValidate" :model="formValidate" :label-width="120">
       <Row>
-        <i-col span="6">
+        <i-col span="8">
           <FormItem label="标题:" prop="shhtitle">
             <Input v-model="formValidate.shhtitle" placeholder></Input>
           </FormItem>
         </i-col>
-        <i-col span="6">
+        <i-col span="8">
           <FormItem label="公司名称:" prop="gsmc">
             <Input v-model="formValidate.gsmc" placeholder></Input>
           </FormItem>
         </i-col>
-        <i-col span="12">
+        <i-col span="8">
           <FormItem label="推荐机构:" prop="tjjghy">
             <Input v-model="formValidate.tjjghy" placeholder></Input>
           </FormItem>
@@ -126,4 +126,7 @@ export default {
 }
 </script>
 <style scoped>
+.creatDate{
+  width: 130px;
+}
 </style>

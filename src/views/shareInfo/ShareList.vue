@@ -2,28 +2,29 @@
 <Root>
     <Form ref="formValidate" :model="formValidate" :label-width="120">
       <Row>
-        <i-col span="6">
+        <i-col span="8">
           <FormItem label="标题:" prop="gpggtitle">
             <Input v-model="formValidate.gpggtitle" placeholder></Input>
           </FormItem>
         </i-col>
-        <i-col span="6">
+        <i-col span="8">
           <FormItem label="代码:" prop="dm">
             <Input v-model="formValidate.dm" placeholder></Input>
           </FormItem>
         </i-col>
-        <i-col span="6">
+        <i-col span="8">
           <FormItem label="简称:" prop="jc">
             <Input v-model="formValidate.jc" placeholder></Input>
           </FormItem>
         </i-col>
-        <i-col span="6">
+
+      </Row>
+      <Row>       
+         <i-col span="8">
           <FormItem label="企业名称:" prop="qymc">
             <Input v-model="formValidate.qymc" placeholder></Input>
           </FormItem>
         </i-col>
-      </Row>
-      <Row>
         <i-col span="12">
           <FormItem prop="date" label="挂牌时间起止：">
             <DatePicker
@@ -44,17 +45,21 @@
             ></DatePicker>
           </FormItem>
         </i-col>
-        <i-col span="6"> 
+     
+      </Row>
+      <Row>
+           <i-col span="8"> 
         <FormItem label="板块" prop="bkmc">
-            <Select v-model="formValidate.bkmc" placeholder="Select your city">
+            <Select v-model="formValidate.bkmc" placeholder="">
               <Option value="标准板">标准板</Option>
               <Option value="培育板">培育板</Option>
               <Option value="" selected>全部</Option>
             </Select>
           </FormItem>
-
+               </i-col>
+   <i-col span="8"> 
             <FormItem label="层级" prop="cjmc">
-            <Select v-model="formValidate.cjmc" placeholder="Select your city">
+            <Select v-model="formValidate.cjmc" placeholder="">
               <Option value="成长层">成长层</Option>
               <Option value="基础层">基础层</Option>
               <Option value="" selected>全部</Option>
@@ -62,13 +67,13 @@
           </FormItem>
          </i-col>
 
-        <i-col span="12">
+        <i-col span="8">
           <FormItem>
             <Button :loading="isShowLoading" type="primary" @click="handleSubmit('formValidate')">查询</Button>
             <Button @click="handleReset('formValidate')" style="margin-left: 8px">重置</Button>
           </FormItem>
         </i-col>
-      </Row>
+        </Row>
     </Form>
 <i-table border :columns="columnsFiled" :data="dateItems">
      <template slot-scope="{ row, index }" slot="action">
@@ -155,4 +160,7 @@ export default {
 }
 </script>
 <style scoped>
+.creatDate{
+  width: 130px;
+}
 </style>

@@ -1,4 +1,6 @@
 module.exports = {
+    lintOnSave: false,
+    publicPath:'./',
     devServer: {
         port: 8888, 
         proxy: {
@@ -12,5 +14,5 @@ module.exports = {
             },
         },
     },
-    lintOnSave: false  
+     
 }
