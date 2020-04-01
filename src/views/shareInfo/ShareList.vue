@@ -1,5 +1,5 @@
 <template>
-<Root>
+  <Root>
     <Form ref="formValidate" :model="formValidate" :label-width="120">
       <Row>
         <i-col span="8">
@@ -17,10 +17,9 @@
             <Input v-model="formValidate.jc" placeholder></Input>
           </FormItem>
         </i-col>
-
       </Row>
-      <Row>       
-         <i-col span="8">
+      <Row>
+        <i-col span="8">
           <FormItem label="企业名称:" prop="qymc">
             <Input v-model="formValidate.qymc" placeholder></Input>
           </FormItem>
@@ -45,27 +44,26 @@
             ></DatePicker>
           </FormItem>
         </i-col>
-     
       </Row>
       <Row>
-           <i-col span="8"> 
-        <FormItem label="板块" prop="bkmc">
-            <Select v-model="formValidate.bkmc" placeholder="">
+        <i-col span="8">
+          <FormItem label="板块" prop="bkmc">
+            <Select v-model="formValidate.bkmc" placeholder>
               <Option value="标准板">标准板</Option>
               <Option value="培育板">培育板</Option>
-              <Option value="" selected>全部</Option>
+              <Option value selected>全部</Option>
             </Select>
           </FormItem>
-               </i-col>
-   <i-col span="8"> 
-            <FormItem label="层级" prop="cjmc">
-            <Select v-model="formValidate.cjmc" placeholder="">
+        </i-col>
+        <i-col span="8">
+          <FormItem label="层级" prop="cjmc">
+            <Select v-model="formValidate.cjmc" placeholder>
               <Option value="成长层">成长层</Option>
               <Option value="基础层">基础层</Option>
-              <Option value="" selected>全部</Option>
+              <Option value selected>全部</Option>
             </Select>
           </FormItem>
-         </i-col>
+        </i-col>
 
         <i-col span="8">
           <FormItem>
@@ -73,17 +71,16 @@
             <Button @click="handleReset('formValidate')" style="margin-left: 8px">重置</Button>
           </FormItem>
         </i-col>
-        </Row>
+      </Row>
     </Form>
-<i-table border :columns="columnsFiled" :data="dateItems">
-     <template slot-scope="{ row, index }" slot="action">
+    <i-table border :columns="columnsFiled" :data="dateItems">
+      <template slot-scope="{ row, index }" slot="action">
         <Button type="primary" size="small" style="margin-right: 5px" @click="show(index)">详情</Button>
         <!-- <Button type="error" size="small" @click="remove(index)">Delete</Button> -->
       </template>
-
     </i-table>
     <Page :total="totalcount" show-total @on-change="changePage"></Page>
-  </Root> 
+  </Root>
 </template>
 
 <script>
@@ -91,10 +88,10 @@ import api from "../../network/api";
 import { request } from "../../network/index";
 import Root from "../../components/common/Root";
 export default {
-  name: 'Sharelist',
-  data(){
+  name: "Sharelist",
+  data() {
     return {
-        totalcount: 0,
+      totalcount: 0,
       columnsFiled: [
         { title: "标题", key: "gpggtitle" },
         { title: "时间", key: "gpggsj" },
@@ -102,7 +99,7 @@ export default {
         { title: "层级名称", key: "cjmc" },
         { title: "代码", key: "dm" },
         { title: "简称", key: "jc" },
-        { title: "企业名称",  key: "qymc" }
+        { title: "企业名称", key: "qymc" }
       ],
       isShowLoading: false,
       pageNum: 1,
@@ -114,21 +111,21 @@ export default {
         cjmc: "",
         dm: "",
         jc: "",
-        qymc: "",
+        qymc: ""
       }
-    }
+    };
   },
   components: {
-      Root
+    Root
   },
-  created(){},
-  mounted(){},
+  created() {},
+  mounted() {},
   methods: {
-       changePage(currentPage) {
+    changePage(currentPage) {
       this.pageNum = currentPage;
       this.handleSubmit();
     },
-      handleSubmit(){
+    handleSubmit() {
       let params = {};
       params = this.formValidate;
       this.isShowLoading = true;
@@ -152,15 +149,15 @@ export default {
           this.$Message.error("您的网络连接异常，请稍候再试！");
         });
       this.isShowLoading = false;
-      },
-      handleReset(){
-        this.$refs[name].resetFields();
-      }
+    },
+    handleReset() {
+      this.$refs[name].resetFields();
+    }
   }
-}
+};
 </script>
 <style scoped>
-.creatDate{
+.creatDate {
   width: 130px;
 }
 </style>

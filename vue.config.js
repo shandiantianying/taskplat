@@ -1,18 +1,17 @@
 module.exports = {
     lintOnSave: false,
+    pwa: {
+        iconPaths: {
+          favicon32: 'favicon.ico',
+          favicon16: 'favicon.ico',
+          appleTouchIcon: 'favicon.ico',
+          maskIcon: 'favicon.ico',
+          msTileImage: 'favicon.ico'
+        }
+      },
     publicPath:'./',
     devServer: {
         port: 8888, 
-        proxy: {
-            '/api': {
-                target: 'http://xxxx/device/', // 对应自己的接口
-                changeOrigin: true,
-                ws: true,
-                pathRewrite: {
-                    '^/api': '',
-                },
-            },
-        },
     },
      
 }

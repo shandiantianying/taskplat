@@ -78,8 +78,12 @@ export default {
     //     this.pwdError = "";
     //   }
     },
-    register() {},
-    forgetPwd() {},
+    register() {
+      window.open('http://www.baidu.com','_blank')
+    },
+    forgetPwd() {
+        window.open('http://www.baidu.com','_blank')
+    },
     submit() {
       let params = {
         username: this.account,
