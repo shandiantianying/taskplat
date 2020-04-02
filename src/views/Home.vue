@@ -232,6 +232,8 @@ export default {
         data: params
       })
         .then(res => {
+          console.log(res.data);
+          
           this.isShowLoading = false;
           this.incomeAndTaxdata = res.data;
           let options = {

@@ -107,6 +107,18 @@ const store = new Vuex.Store({
                     }
                 ],
             },
+            {
+                text:'企业微信',
+                type:'ios-contacts',
+                children:[
+                    {
+                        type:'ios-contacts-outline',
+                        name:'ewcontants',
+                        text:'联系人'
+                    }
+                ]
+            }
+            
         ],
     },
     mutations: {

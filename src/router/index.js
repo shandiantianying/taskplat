@@ -88,6 +88,12 @@ export const asyncRoutes = {
         meta: { title: '预审核信息' },
         component: () => import('../views/shareInfo/ShareShh.vue'),
     },
+    ewcontants: {
+        path: 'ewcontants',
+        name: 'ewcontants',
+        meta: { title: '联系人信息' },
+        component: () => import('../views/ewchat/Ewcontants.vue'),
+    },
     t1: {
         path: 't1',
         name: 't1',

@@ -14,7 +14,10 @@ export default {
   tdinitdata:'v1/chartData/incomeAndTaxData',
   tdpreRecordData:'v1/chartData/preRecordData',
   tdsendDeclarData:'v1/chartData/sendDeclarData',
+  
   atinitdata:'v1/chartData/atinitdata',
   attaxpaydata:'v1/chartData/attaxpaydata',
-  cpchartdata:'v1/chartData/cpchartdata'
+  cpchartdata:'v1/chartData/cpchartdata',
+
+  ewcontantsdata:'v1/Ewcontant/queryData?pageNum=PAGENUM' ,
 }
