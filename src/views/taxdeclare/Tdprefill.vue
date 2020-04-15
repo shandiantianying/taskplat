@@ -136,7 +136,7 @@ export default {
         .then(res => {
           this.isShowLoading = false;
           this.dateItems = res.data.pageInfo.list;
-          console.log(res.data.pageInfo.total);
+          console.log(res.data.pageInfo);
           this.totalcount = res.data.pageInfo.total;
           if (this.totalcount === 0) {
             this.$Message.warning("查询无数据！");

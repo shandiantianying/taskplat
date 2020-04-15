@@ -139,13 +139,17 @@ export default {
       });
     },
     changePage(currentPage) {
+      console.log("currt:"+currentPage);
+      
       this.pageNum = currentPage;
       this.handleSubmit();
     },
+
     handleSubmit() {
       let params = {};
       params = this.formValidate;
       this.isShowLoading = true;
+           console.log("currt:"+this.pageNum);
       request({
         url: api.cpdataQuery.replace("PAGENUM", this.pageNum),
         method: "POST",
